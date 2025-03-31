@@ -31,10 +31,8 @@ public class Student {
         System.out.print("Enter your GPA: ");
         double inputGPA = scanner.nextDouble();
 
-        // Create student object first
         Student student1 = new Student(inputName, inputAge, inputGPA);
 
-        // Now it's safe to call methods on student1
         student1.printInfo();
         System.out.println("Honor Student: " + student1.isHonorStudent());
 
