@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Student {
     private String name;
     private int age;
@@ -13,9 +15,21 @@ public class Student {
         System.out.println("Name: " + name + ", Age: " + age + ", GPA: " + gpa);
     }
 
-    // Main method for testing
     public static void main(String[] args) {
-        Student student1 = new Student("Bao Nguyen", 21, 3.8);
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your name: ");
+        String inputName = scanner.nextLine();
+
+        System.out.print("Enter your age: ");
+        int inputAge = scanner.nextInt();
+
+        System.out.print("Enter your GPA: ");
+        double inputGPA = scanner.nextDouble();
+
+        Student student1 = new Student(inputName, inputAge, inputGPA);
         student1.printInfo();
+
+        scanner.close();
     }
 }
